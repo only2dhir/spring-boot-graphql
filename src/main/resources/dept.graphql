@@ -1,0 +1,22 @@
+schema {
+    query: Query
+}
+
+type Query{
+    allDepts: [Department]
+    deptById(id: Int) : Department
+}
+
+type Department {
+    id: Int
+    name: String
+    description: String
+    emps: [Employee]
+}
+
+type Employee {
+    id: Int
+    name: String
+    age: Int
+    salary: Float
+}
